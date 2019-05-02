@@ -1,0 +1,11 @@
+[Unit]
+Description=VIX Calculator Service
+
+[Service]
+ExecStart=/usr/bin/python3 /root/hs-vix-calculator/VIXCalculator.py
+WorkingDirectory=/root/
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target

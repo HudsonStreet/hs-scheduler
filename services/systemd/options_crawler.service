@@ -1,0 +1,13 @@
+[Unit]
+Description=Options Crawler Service
+Wants=options_crawler_run.timer
+
+[Service]
+User=root
+ExecStart=/usr/bin/python3 /root/hs-options-crawler/main.py
+WorkingDirectory=/root/
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target

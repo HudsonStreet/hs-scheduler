@@ -1,0 +1,12 @@
+[Unit]
+Description=Run options-crawler  every 3 minutes
+Requires=options_crawler.service
+
+[Timer]
+Unit=options_crawler.service
+OnUnitInactiveSec=3m
+RandomizedDelaySec=0s
+AccuracySec=1s
+
+[Install]
+WantedBy=timers.target
