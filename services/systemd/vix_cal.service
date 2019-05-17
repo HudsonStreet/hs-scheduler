@@ -2,7 +2,7 @@
 Description=VIX Calculator Service
 
 [Service]
-ExecStart=/usr/bin/python3 /root/hs-vix-calculator/VIXCalculator.py
+ExecStart=/usr/bin/python3 /root/hs-vix-calculator/VIXCalculator.py -p sina_stock_data.csv
 WorkingDirectory=/root/
 Restart=on-failure
 RestartSec=5s
